@@ -1,0 +1,3 @@
+C:\Users\egrpa\IPN\BookLibrary2\BookLibrary\BookLibrariWebApp\obj\Debug\BookLibrariWebApp.njsprojAssemblyReference.cache
+C:\Users\egrpa\IPN\BookLibrary2\BookLibrary\BookLibrariWebApp\obj\Debug\BookLibrariWebApp.njsproj.CoreCompileInputs.cache
+C:\Users\egrpa\IPN\BookLibrary2\BookLibrary\BookLibrariWebApp\bin\Microsoft.NodejsTools.WebRole.dll

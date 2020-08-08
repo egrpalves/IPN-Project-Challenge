@@ -1,0 +1,36 @@
+﻿<div class="jumbotron">
+    <div ng-cloak ng-if="isLoggedIn">
+        <h2>Books</h2>
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-hover table-borderless">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th ng-click="changeOrder('Title')">Title</th>
+                            <th ng-click="changeOrder('AuthorName')">Author</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="b in books | orderBy: order.column:order.descending">
+                            <td>
+                                <a href="#/book/{{b.Id}}">{{b.Title}}</a>
+                            </td>
+                            <td>
+                                <a href="#/author/{{b.AuthorName.Id}}">{{b.AuthorName}}</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <a href="#/create" class="btn btn-primary">Create New Book</a>
+        </div>
+    </div>
+    <div ng-if="!isLoggedIn">
+        <h3>To view your books you need to create an account</h3>
+        <div>
+            <a href="#/" class="btn btn-primary">Create Account</a>
+        </div>
+    </div>
+</div>

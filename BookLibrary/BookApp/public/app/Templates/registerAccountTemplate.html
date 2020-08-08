@@ -1,0 +1,46 @@
+﻿<div class="jumbotron">
+    <h3>Register Account</h3>
+
+    <form class="form" name="registerForm" novalidate>
+        <div class="form-group row">
+            <label for="email" class="offset-1 col-sm-3 col-form-label">Email</label>
+            <div class="col-sm-4">
+                <input ng-model="userData.email" type="email" class="form-control" name="email" placeholder="Email" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="password" class="offset-1 col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-4">
+                <input ng-model="userData.password" type="password" class="form-control" name="password" placeholder="Password" required>
+                <span ng-if="!passwordValid" class="text-danger">Password must have at leats 6 characters and 1 capital letter...</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="confirmPassword" class="offset-1 col-sm-3 col-form-label">Confirm Password</label>
+            <div class="col-sm-4">
+                <input ng-model="userData.confirmPassword" type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" required>
+                <span ng-if="!confirmPasswordValid" class="text-danger">Passwords don't match...</span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="accountType" class="offset-1 col-sm-3 col-form-label">Account Type</label>
+            <div class="col-sm-4 form-check">
+                <input ng-model="userData.roleName" class="form-check-input" type="radio" name="roleName" value="admin" checked />
+                <label for="accountType" class="form-check-label">Administrator</label>
+            </div>
+            <div class="col-sm-2 form-check">
+                <input ng-model="userData.roleName" class="form-check-input" type="radio" name="roleName" value="user" />
+                <label for="accountType" class="form-check-label">Regular User</label>
+            </div>
+        </div>
+        <div class="form-group row offset-4 text-danger">
+            <span>{{message}}</span>
+        </div>
+        <div class="form-group">
+            <div class="offset-4 col-sm-5">
+                <button type="button" ng-disabled="registerForm.$dirty && registerForm.$invalid" ng-click="registerUser()" class="btn btn-primary">Register</button>
+                <a href="#/" class="btn btn-secundary">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>

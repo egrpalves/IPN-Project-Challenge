@@ -1,0 +1,17 @@
+﻿<div class="jumbotron">
+    <h1 class="display-4">Welcome to Our Book Library!</h1>
+    <p class="lead">Here you can keep track of your books.</p>
+    <hr class="my-4">
+    <p>As a Regular User you can see what books we have and their details!</p>
+    <p>As an Administrator you can help us add, update and delete books!</p>
+    <p>Join Us Now!</p>
+    <p class="lead">
+        <div ng-if="isLoggedIn">
+            <a class="btn btn-primary btn-lg" href="#/create">Add a Book</a>
+            <a class="btn btn-primary btn-lg" href="#/books">See Your Books</a>
+        </div>
+        <div ng-if="!isLoggedIn">
+            <a class="btn btn-primary btn-lg" href="#/register">Register</a>
+        </div>
+    </p>
+</div>

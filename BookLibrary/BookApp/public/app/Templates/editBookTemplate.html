@@ -1,0 +1,42 @@
+﻿<div class="jumbotron">
+    <h3>Edit Book</h3>
+
+    <form class="form-horizontal" role="form">
+        <div class="form-group row">
+            <label for="bookTitle" class="col-sm-1 control-label">Title</label>
+            <div class="col-sm-4">
+                <input required ng-model="book.Title" type="text" class="form-control" id="bookTitle" placeholder="Title">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="bookAuthor" class="col-sm-1 control-label">Author</label>
+            <div class="col-sm-4">
+                <input ng-model="book.AuthorName" type="text" class="form-control" id="bookAuthorName" placeholder="Author">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="bookPublished" class="col-sm-1 control-label">Year</label>
+            <div class="col-sm-4">
+                <input ng-model="book.Year" type="text" class="form-control" id="bookYear" placeholder="Year Published">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="bookGenre" class="col-sm-1 control-label">Genre</label>
+            <div class="col-sm-4">
+                <input ng-model="book.Genre" type="text" class="form-control" id="bookGenre" placeholder="Genre">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="bookPrice" class="col-sm-1 control-label">Price</label>
+            <div class="col-sm-4">
+                <input ng-model="book.Price" type="text" class="form-control" id="bookPrice" placeholder="Price">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-1 col-sm-5">
+                <button type="button" ng-click="editBook()" class="btn btn-primary">Save</button>
+                <button type="button" ng-click="cancel()" class="btn btn-secundary">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

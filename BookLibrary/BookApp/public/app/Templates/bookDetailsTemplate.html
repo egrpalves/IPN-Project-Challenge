@@ -1,0 +1,50 @@
+﻿<div class="jumbotron">
+    <div ng-cloak>
+        <h2>{{ book.Title }}</h2>
+        <div>
+            <div class="card text-center inline">
+                <div class="row">
+                    <div class="col-sm-6 offset-1">
+                        <div class="card-body inline">
+                            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Author</div>
+                                <div class="card-body text-primary">
+                                    <p class="card-text">{{book.AuthorName}}</p>
+                                </div>
+                            </div>
+                            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Genre</div>
+                                <div class="card-body text-primary">
+                                    <p class="card-text">{{book.Genre}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="card-body inline">
+                            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Year</div>
+                                <div class="card-body text-primary">
+                                    <p class="card-text">{{book.Year}}</p>
+                                </div>
+                            </div>
+                            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Price</div>
+                                <div class="card-body text-primary">
+                                    <p class="card-text">{{book.Price | currency}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div>
+            <a href="#/edit/{{book.Id}}" class="btn btn-primary">Edit Book</a>
+            <!--<button type="button" ng-click="deleteBook()" confirm="Do you want to delete?" class="btn btn-secundary">Delete Book</button>-->
+            <delete-book method="deleteBook()">Delete</delete-book>
+        </div>
+    </div>
+
+
+</div>
